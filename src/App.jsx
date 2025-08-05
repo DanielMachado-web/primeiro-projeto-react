@@ -23,7 +23,7 @@ function App() {
     setList([{ id: uuid(), task }]);
   }
   return (
-    <div>
+    <container>
       <input className='input' onChange={inputMudou} placeholder="oque tenha que fazer com o projeto"></input>
       <button className='button' onClick={cliqueiNoBotao}>Adicionar</button>
 
@@ -36,7 +36,7 @@ function App() {
         }
       </u>
 
-    </div>
+    </container>
   )
 }
 

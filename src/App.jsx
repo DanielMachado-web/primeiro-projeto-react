@@ -32,7 +32,11 @@ function App() {
         <u>
           {
             list.map(item => (
-              <li key={item.id}>{item.task}</li>
+              <li key={item.id}>
+                <FcCheckmark />
+                <li key={item.id}>{item.task}</li>
+                <FcEmptyTrash />
+              </li>
             ))
 
           }

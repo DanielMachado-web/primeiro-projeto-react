@@ -22,3 +22,12 @@ export const Input = styled.Input`
     border-radius: 10px;
     
 `
+export const ButtonPut = styled.button`
+    background: #8052ec;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+
+`

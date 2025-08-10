@@ -22,12 +22,16 @@ export const Input = styled.Input`
     border-radius: 10px;
     
 `
-export const ButtonPut = styled.button`
+export const Button = styled.Button`
     background: #8052ec;
     border-radius: 10px;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    font-size: 17px;
+    line-height: 1.5;
+    height: 40px;
+    font-weight: 400;
 
 `

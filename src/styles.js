@@ -16,3 +16,9 @@ export const TodoList = styled.div`
     border-radius: 10px;
     
 `
+export const Input = styled.Input`
+    border: 2px solid #000;
+    padding: 30px 20px;
+    border-radius: 10px;
+    
+`

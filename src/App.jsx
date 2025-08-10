@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
-import { Container, TodoList } from './styles.js';
+import { Container, TodoList, Input} from './styles.js';
 
 function App() {
 

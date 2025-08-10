@@ -13,5 +13,6 @@ export const Container = styled.div`
 export const TodoList = styled.div`
     background: white;
     padding: 30px 20px;
+    border-radius: 10px;
     
 `

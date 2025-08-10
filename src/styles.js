@@ -33,5 +33,6 @@ export const Button = styled.Button`
     line-height: 1.5;
     height: 40px;
     font-weight: 400;
+    
 
 `

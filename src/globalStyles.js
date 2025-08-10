@@ -5,9 +5,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
-    
+    outline: none;    
   
-  } `
+  } 
 
-  export default GlobalStyle
+  * {
+    font-family: 'Roboto', sans-serif;
+  }`
+
+  export default GlobalStyle;

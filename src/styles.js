@@ -10,3 +10,8 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
 `
+export const TodoList = styled.div`
+    background: white;
+    padding: 30px 20px;
+    
+`

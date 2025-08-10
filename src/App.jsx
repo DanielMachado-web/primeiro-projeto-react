@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
-import { Container } from './styles'
+import { Container, TodoList } from './styles'
 
 function App() {
 
@@ -24,6 +24,7 @@ function App() {
   }
   return (
     <Container>
+      <TodoList></TodoList>
       <input className='input' onChange={inputMudou} placeholder="oque tenha que fazer com o projeto"></input>
       <button className='button' onClick={cliqueiNoBotao}>Adicionar</button>
 

@@ -14,6 +14,11 @@ export const TodoList = styled.div`
     background: white;
     padding: 30px 20px;
     border-radius: 10px;
+
+    ul{
+        padding: 0;
+        margin-top: 60px;
+    }
     
 `
 export const Input = styled.Input`

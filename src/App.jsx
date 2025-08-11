@@ -29,9 +29,11 @@ function App() {
           {
             list.map(item => (
               <li key={item.id}>
-                <FcCheckmark />
-                <li key={item.id}>{item.task}</li>
-                <FcEmptyTrash />
+                <ListItem isFinished={item.finished}>
+                  <FcCheckmark />
+                  <li key={item.id}>{item.task}</li>
+                  <FcEmptyTrash />
+                </ListItem>
               </li>
             ))
 

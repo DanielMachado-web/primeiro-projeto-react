@@ -45,7 +45,7 @@ export const Button = styled.Button`
 
 `
 export const ListItem = styled.div`
-    background: #E4E4E4;
+    background: ${props => props.isFinished ? '#03ff03ff' : '#E4E4E4'};
     box-shadow: 1px 4px 10px rgba(0,0,0,0.2);
     border-radius: 5px;
     height: 60px;

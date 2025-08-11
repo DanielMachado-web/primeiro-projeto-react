@@ -26,6 +26,7 @@ export const Input = styled.Input`
     padding: 30px 20px;
     border-radius: 10px;
     width: 340px;
+    margin-right: 40px;
 
 `
 export const Button = styled.Button`

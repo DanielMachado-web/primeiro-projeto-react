@@ -2,26 +2,22 @@ import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
 import { FcEmptyTrash, FcCheckmark} from "react-icons/fc";
-import { Container, TodoList, Input, Button} from './styles.js';
+import { Container, TodoList, Input, Button, ListItem} from './styles.js';
 
 function App() {
 
-  const [list, setList] = useState([{ id: uuid(), task: 'DANIEL MACHADO' }]);
-  const [task, setTask] = ('');
+  const [list, setList] = useState([{ id: uuid(), task: 'DANIEL MACHADO', finished: true }]);
+  const [task, setTask] = useState('');
 
 
-  // "comprar abacate", "levar  o Nico para passear", "daniel ribeiro machado", "comprar abacate", "levar  o Nico para passear", "daniel ribeiro machado"
   function inputMudou(event) {
 
-    setTask(event.target.value)
-    //console.log(event.target.value)
-    //setList([{ id: uuid(), task: event.target.value }]);
-
+    setTask(event.target.value)     
 
   }
 
   function cliqueiNoBotao() {
-    setList([{ id: uuid(), task }]);
+    setList([...list, { id: uuid(), task, finished: false }]);
   }
   return (
     <Container>

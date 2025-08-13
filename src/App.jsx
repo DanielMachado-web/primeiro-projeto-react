@@ -45,20 +45,19 @@ function App() {
         <Input onChange={inputMudou} placeholder="oque tenha que fazer com o projeto"></Input>
         <Button onClick={cliqueiNoBotao}>Adicionar</Button>
 
-        <u>
-          {
-            list.map(item => (
-              <li key={item.id}>
-                <ListItem isFinished={item.finished} key={item.id}>
-                  <Check onClick={() => finalizarTarefa(item.id)} />
-                  <li>{item.task}</li>
-                  <Trash onClick={() => deletarTarefa(item.id)} />
-                </ListItem>
-              </li>
+        <ul>
+          {list.length > 0 ? (
+            list.map((item) => (
+              <ListItem isFinished={item.finished} key={item.id}>
+                <Check onClick={() => finalizarTarefa(item.id)} />
+                <li>{item.task}</li>
+                <Trash onClick={() => deletarItem(item.id)} />
+              </ListItem>
             ))
-
-          }
-        </u>
+          ) : (
+            <h3>Não há itens na lista</h3>
+          )}
+        </ul>
 
       </TodoList>
     </Container>

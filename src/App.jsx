@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
-import { FcEmptyTrash, FcCheckmark } from "react-icons/fc";
-import { Container, TodoList, Input, Button, ListItem } from './styles.js';
+
+import { Container, TodoList, Input, Button, ListItem, Trash, Check } from './styles.js';
 
 function App() {
 
@@ -49,9 +49,9 @@ function App() {
             list.map(item => (
               <li key={item.id}>
                 <ListItem isFinished={item.finished} key={item.id}>
-                  <FcCheckmark onClick={() => finalizarTarefa(item.id)} />
+                  <Check onClick={() => finalizarTarefa(item.id)} />
                   <li>{item.task}</li>
-                  <FcEmptyTrash onClick={() => deletarTarefa(item.id)} />
+                  <Trash onClick={() => deletarTarefa(item.id)} />
                 </ListItem>
               </li>
             ))

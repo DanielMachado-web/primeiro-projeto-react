@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { FcEmptyTrash, FcCheckmark } from "react-icons/fc";
+
 
 export const Container = styled.div`
 
@@ -62,3 +64,12 @@ export const ListItem = styled.div`
     }
     
 `
+
+export const Check = styled(FcCheckmark)`
+  cursor: pointer;
+  margin-right: 10px;
+`;
+
+export const Trash = styled(FcEmptyTrash)`
+  cursor: pointer;
+`;

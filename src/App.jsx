@@ -6,20 +6,21 @@ import { Container, TodoList, Input, Button, ListItem, Trash, Check } from './st
 
 function App() {
 
-  const [list, setList] = useState([
-    { id: uuid(), task: 'DANIEL MACHADO', finished: true },
-  ]);
-  const [task, setTask] = useState('');
+  const [list, setList] = useState([]);
+  const [inputTask, setInputTask] = useState('');
 
 
   function inputMudou(event) {
 
-    setTask(event.target.value)
+    setInputTask(event.target.value)
 
   }
 
   function cliqueiNoBotao() {
-    setList([...list, { id: uuid(), task, inputTask, finished: false }]);
+    if (inputTask) {
+
+      setList([...list, { id: uuid(), task: inputTask, finished: false }]);
+    }
   }
 
 
@@ -34,7 +35,7 @@ function App() {
   }
 
   function deletarTarefa(id) {
-    const newList = list.filter(item => item.id !==  id);
+    const newList = list.filter(item => item.id !== id);
     setList(newList);
   }
 

@@ -43,7 +43,16 @@ export const Button = styled.Button`
     height: 40px;
     font-weight: 400;
     width: 130px;
-    
+
+    &:hover {
+        background: #6f4c7a;
+        opacity: 0.8;
+    }
+
+    &:active {
+        background: #6f4c7a;
+        opacity: 0.6;
+    }
 
 `
 export const ListItem = styled.div`

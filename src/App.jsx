@@ -6,7 +6,9 @@ import { Container, TodoList, Input, Button, ListItem} from './styles.js';
 
 function App() {
 
-  const [list, setList] = useState([{ id: uuid(), task: 'DANIEL MACHADO', finished: true }]);
+  const [list, setList] = useState([
+    { id: uuid(), task: 'DANIEL MACHADO', finished: true },
+  ]);
   const [task, setTask] = useState('');
 
 
@@ -17,7 +19,7 @@ function App() {
   }
 
   function cliqueiNoBotao() {
-    setList([...list, { id: uuid(), task, finished: false }]);
+    setList([...list, { id: uuid(), task, inputTask, finished: false }]);
   }
   return (
     <Container>
@@ -29,9 +31,9 @@ function App() {
           {
             list.map(item => (
               <li key={item.id}>
-                <ListItem isFinished={item.finished}>
+                <ListItem isFinished={item.finished} key={item.id}>
                   <FcCheckmark />
-                  <li key={item.id}>{item.task}</li>
+                  <li>{item.task}</li>
                   <FcEmptyTrash />
                 </ListItem>
               </li>

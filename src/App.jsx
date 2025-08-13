@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
-import { FcEmptyTrash, FcCheckmark} from "react-icons/fc";
-import { Container, TodoList, Input, Button, ListItem} from './styles.js';
+import { FcEmptyTrash, FcCheckmark } from "react-icons/fc";
+import { Container, TodoList, Input, Button, ListItem } from './styles.js';
 
 function App() {
 
@@ -14,13 +14,30 @@ function App() {
 
   function inputMudou(event) {
 
-    setTask(event.target.value)     
+    setTask(event.target.value)
 
   }
 
   function cliqueiNoBotao() {
     setList([...list, { id: uuid(), task, inputTask, finished: false }]);
   }
+
+
+  function finalizarTarefa(id) {
+
+    const newList = list.map(item => [
+      item.id === id ? { ...item, finished: true } : item
+    ]);
+
+    setList(newList);
+
+  }
+
+  function deletarTarefa(id) {
+    const newList = list.filter(item => item.id !==  id);
+    setList(newList);
+  }
+
   return (
     <Container>
       <TodoList>
@@ -32,9 +49,9 @@ function App() {
             list.map(item => (
               <li key={item.id}>
                 <ListItem isFinished={item.finished} key={item.id}>
-                  <FcCheckmark />
+                  <FcCheckmark onClick={() => finalizarTarefa(item.id)} />
                   <li>{item.task}</li>
-                  <FcEmptyTrash />
+                  <FcEmptyTrash onClick={() => deletarTarefa(item.id)} />
                 </ListItem>
               </li>
             ))

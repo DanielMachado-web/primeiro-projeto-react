@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FcEmptyTrash, FcCheckmark } from "react-icons/fc";
+import { FcEmptyTrash, FcCheckmark } from 'react-icons/fc';
 
 
 export const Container = styled.div`
@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const TodoList = styled.div`
     background: white;
     padding: 30px 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 
     ul{
         padding: 0;
@@ -23,17 +23,17 @@ export const TodoList = styled.div`
     }
     
 `
-export const Input = styled.Input`
-    border: 2px solid #000;
-    padding: 30px 20px;
-    border-radius: 10px;
-    width: 340px;
-    margin-right: 40px;
+export const Input = styled.input`
+  border: 2px solid rgba(209, 211, 212, 0.4);
+  border-radius: 5px;
+  height: 40px;
+  margin-right: 40px;
+  width: 340px;
 
 `
-export const Button = styled.Button`
+export const Button = styled.button`
     background: #8052ec;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -45,7 +45,7 @@ export const Button = styled.Button`
     width: 130px;
 
     &:hover {
-        background: #6f4c7a;
+        background: #f7f4f8ff;
         opacity: 0.8;
     }
 
@@ -64,19 +64,19 @@ export const ListItem = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
-    padding: 0, 10px;
+    padding: 0 10px;
     width: 500px;
 
 
     li{
         list-style: none;
     }
-    
-`
+
+`;
 
 export const Check = styled(FcCheckmark)`
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 5px;
 `;
 
 export const Trash = styled(FcEmptyTrash)`
